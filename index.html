@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.myonlinenews.com </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- font-family: 'Baloo Da 2', cursive; -->
+    <style>
+        /* CSS RESET  */
+        body {
+            margin: 0px;
+            padding: 0px;
+            /* font-family: 'Baloo Chettan 2', cursive; */
+            overflow-x: none;
+            background: url('BG.jpg') no-repeat center center/cover;
+            border: 2px solid rgb(206, 14, 24);
+
+            /* position: relative;
+            right: 0px; */
+
+
+        }
+
+        h {
+
+            font-size: 50px;
+            /* For top most heading */
+            position: relative;
+            /* Note:Here while bringing to center margin auto did not work so to bring to center we use position relative  */
+            left: 35%;
+            color: tomato;
+            text-shadow: 1.5px 1px rgb(231, 42, 8);
+            /* For adding a little bit of beauty  */
+
+        }
+
+        h1 {
+
+            font-size: 50px;
+            position: relative;
+            /* Note:Here while bringing to center margin auto did not work so to bring to center we use position relative  */
+            left: 27%;
+            /* For top storoies */
+            color: #1b0ee6;
+
+            /* text-shadow: 1.5px 1px rgb(231, 42, 8); */
+
+        }
+
+        .heading ul {
+            display: flex;
+            /* For the heading that looks bigger */
+            justify-content: center;
+            text-align: center;
+        }
+
+        .heading ul li {
+            list-style: none;
+            /* To remove the dots  */
+            padding: 5px 95px;
+            /* To maintain spacing   */
+            font-size: 25px;
+            font-family: 'Baloo Da 2', cursive;
+            font-weight: bold;
+            border-radius: 20px;
+            /* So that borders are visible properly when we hover over them  */
+        }
+
+        .heading ul li:hover {
+            color: whitesmoke;
+            background-color: black;
+
+        }
+
+        .subheading ul
+
+        /* For displaying other sections */
+            {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background-color: black;
+            color: blanchedalmond;
+        }
+
+        .subheading ul li {
+            list-style: none;
+            /* Again to remove dots  */
+
+            padding: 2px 20px;
+            font-family: 'Baloo Da 2', cursive;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .subheading ul li:hover {
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            text-decoration: underline;
+        }
+
+        .subheading input
+
+        /* For search section  */
+            {
+            text-align: center;
+            background-color: whitesmoke;
+            color: gray;
+            border: 2px solid blanchedalmond;
+            border-radius: 10px;
+        }
+
+        .btn {
+            color: whitesmoke;
+            background-color: black;
+            border: 2px solid blanchedalmond;
+            border-radius: 15px;
+        }
+
+        .btn:hover {
+            color: cyan;
+        }
+
+        .mid {
+            display: flex;
+        }
+
+        .mid-left
+
+        /* For the next section's left side part  */
+            {
+            border: 1px solid gray;
+            width: 40%;
+            position: relative;
+            left: 20px;
+            height: 760px;
+        }
+
+        .img1 img
+
+        /* For image of NITR */
+            {
+            height: 335px;
+        }
+
+        .img1 img:hover {
+            zoom: 130%;
+        }
+
+        .mid-left p {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .flex
+
+        /* To keep bottom 2 images in line  */
+            {
+            display: flex;
+        }
+
+        .img2 img {
+            height: 178px;
+            margin-bottom: -18px;
+            /* So that they remain little away from bottom  */
+        }
+
+        .img2 img:hover {
+            zoom: 110%;
+        }
+
+        .img2 p
+
+        /* For paragraph section of bottom 2 images  */
+            {
+            font-size: 20px;
+            font-weight: lighter;
+            font-family: 'Baloo Chettan 2', cursive;
+        }
+
+        .img2 p:hover {
+            color: gray;
+        }
+
+        .stories
+
+        /* For Top Stories section  */
+            {
+            border: 1px solid gray;
+            position: relative;
+            /* Relative to left side box  */
+            left: 10%;
+            width: 400px;
+            overflow-y: scroll;
+            height: 760px;
+            overflow-x: none;
+            background-color: rgb(104, 226, 33, 0.25);
+        }
+
+        .stories h1
+
+        /* Heading of right most top stories section  */
+            {
+            /* margin-top: 10px;
+            margin-left: -66px; */
+            position: relative;
+            top: -31px;
+            left: 34px;
+        }
+
+        .para
+
+        /* Paragraphs of top Stories section  */
+            {
+            font-family: 'Baloo Chettan 2', cursive;
+            font-weight: bold;
+            color: black;
+            font-size: 20px;
+            padding-bottom: 40px;
+            /* To give gaps */
+        }
+
+        .para :hover {
+            color: blueviolet;
+        }
+
+        /* Features of Scroll bar  */
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 5px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(104, 226, 33);
+            border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #37e431;
+        }
+
+
+
+        /* Now I will display different types of news  */
+
+        .tech-news {
+            display: flex;
+
+            /* To align all news  */
+
+        }
+
+
+        #tech::before
+
+        /* To attach image on technology */
+            {
+            content: "";
+            position: absolute;
+            height: 80%;
+            width: 99.5%;
+            z-index: -1;
+            background: url("Technology.jpg");
+            opacity: 0.4;
+        }
+
+        h2 {
+            color: red;
+            font-weight: lighter;
+
+            /* margin-top: 10px;
+            margin-left: 43%; */
+            position: relative;
+            left: 40%;
+            font-size: 40px;
+
+        }
+
+        .para img
+
+        /* For all three technology related images */
+            {
+            position: relative;
+            left: 10px;
+
+        }
+
+        .para img:hover
+
+        /* Note don't put space in hover section as it does not zoom */
+            {
+            zoom: 120%;
+        }
+
+        .para p {
+            position: relative;
+            left: 10px;
+            /* To displace it a little from left side  */
+        }
+
+        #heal {
+            /* For health section  */
+            display: flex;
+
+
+
+        }
+
+
+        #heal ::before
+
+        /* To add image  */
+            {
+            content: "";
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            background: url('RBC.webp') no-repeat center center/cover;
+            top: 1450px;
+            left: 0px;
+
+        }
+
+        .health-news img {
+            position: relative;
+            /* To keep images properly  */
+            top: 40px;
+            height: 200px;
+            margin-right: 150px;
+            left: 70px;
+
+        }
+
+        .health-news img:hover {
+            zoom: 120%;
+        }
+
+
+        .health h2
+
+        /* For the heading of health  */
+            {
+            position: relative;
+            top: 20px;
+            color: darkblue;
+        }
+
+        .health-news p {
+            color: black;
+            font-size: 20px;
+            font-family: 'Baloo Da 2', cursive;
+            font-weight: bold;
+            position: relative;
+            top: 40px;
+            left: 55px;
+
+        }
+
+        .health-news p:hover {
+            color: violet;
+        }
+
+        /* Sports News section  */
+        .sports-news img {
+            height: 180px;
+            padding: 5px 10px;
+            margin: 10px 15px;
+            position: relative;
+            left: 30px;
+        }
+
+        .sports-news img:hover {
+            zoom: 120%;
+        }
+
+        .khela {
+            /* For aligning sports news */
+            display: flex;
+
+        }
+
+        #sports {
+            border: 2px solid cyan;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        #sports::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            background: url('Sports.webp') no-repeat center center/cover;
+        }
+
+        .sports-news p {
+            color: black;
+            font-size: 20px;
+            font-family: 'Baloo Da 2', cursive;
+            font-weight: bold;
+            position: relative;
+            left: 40px;
+        }
+
+        .sports-news p:hover {
+            opacity: 0.6;
+            
+        }
+        /* Logos */
+
+      .logo
+      {
+          display: flex;
+          flex-direction: row;
+          border: 2px solid cyan;
+           margin: 100px 0px ;
+         
+           /* Margin to give space else it was overiding on top of the former box */
+           background-color: black;
+           width: 100%;
+           
+      }
+       .logo .social a
+       {
+           font-size: 50px;
+           margin: 10px 100px ;
+           padding: 2px 20px;
+        
+       }
+       .logo .social a:hover
+       {
+           opacity: 0.4;
+          
+           /* To know that we are present over them */
+       }
+      .fa-facebook 
+      /* See the method of changing color copied from net  */
+     {
+         color: rgb(0, 17, 255);
+     }
+     .fa-twitter
+     {
+         color: cyan;
+     }
+     .fa-youtube 
+     {
+         color: red;
+     }
+     .fa-reddit
+     {
+         color: tomato;
+     }
+     .subparts
+     {
+         display: flex;
+         border: 2px solid cyan;
+         color: blanchedalmond;
+         background-color: black;
+         margin-top: -100px;
+     }
+     .subparts h6
+     {
+         padding: 5px 15px;
+         margin: 5px 30px;
+     }
+     .subparts h2
+     {
+        padding: 5px 15px;
+         margin: 5px 40px;
+         position: relative;
+         left: -26px;
+     }
+    .subparts h6:hover
+    {
+        color: whitesmoke;
+    }
+    footer 
+    {
+        color: blanchedalmond;
+        background-color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+      
+    </style>
+</head>
+
+<body>
+    <section class="top">
+        <h>ONLINE NEWS</h>
+        <nav class="heading">
+            <ul>
+                <li>NEWS</li>
+                <li>LIVE TV</li>
+                <li>APP</li>
+                <li>MAGAZINE</li>
+            </ul>
+        </nav>
+        <nav class="subheading">
+            <ul>
+                <li>Home</li>
+                <li>My feed</li>
+                <li>Videos</li>
+                <li>Elections</li>
+                <li>Business</li>
+                <li>Technology</li>
+                <li>Health</li>
+                <li>Sports</li>
+                <li>For You</li>
+                <li>More</li>
+                <input type="text" placeholder="Search News">
+                <button class="btn">Download e-paper</button>
+
+            </ul>
+        </nav>
+    </section>
+    <section class="middle">
+        <div class="mid">
+            <div class="mid-left">
+                <div class="img1">
+                    <img src="NIT-Rourkela.jpg">
+                    <p>Emerging Economies University Rankings 2021: NIT Rourkela bagged first position among all NITs.
+                    </p>
+                    <div class="flex">
+                        <div class="img2">
+                            <img src="KIM.jfif">
+                            <p>Kim jong un dies.</p>
+                        </div>
+
+
+                        <div class="img2">
+                            <img src="China.png">
+                            <p>China drops nuclear bomb on US.</p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="stories">
+                <h1>TOP STORIES</h1>
+                <div class="para">
+                    <p>->NITR students protest against director,demand immediate arrest.</p>
+                </div>
+                <div class="para">
+                    <p>->BYJU's files for bankruptcy.</p>
+                </div>
+                <div class="para">
+                    <p>->Covid Cases rise in INDIA,government announces lockdown.</p>
+                </div>
+                <div class="para">
+                    <p>->Students protest against offline exams.</p>
+                </div>
+                <div class="para">
+                    <p>->Salman Khan runs over homless people again.</p>
+                </div>
+                <div class="para">
+                    <p>->Jeff Bezos announces retirement from Amazon,shares plunge.</p>
+                </div>
+                <div class="para">
+                    <p>->Elon announces yet another company,to start factory in India</p>
+                </div>
+                <div class="para">
+                    <p>->Facebook acquires signal,Zuckerberg seen laughing at haters.</p>
+                </div>
+                <div class="para">
+                    <p>->Pakisthan government requests another loan to China to repay loans to Saudi Arabia.</p>
+                </div>
+                <div class="para">
+                    <p>->Facebook to open offices in India.</p>
+                </div>
+                <div class="para">
+                    <p>->Kota Factory Season-2 to come on Netflix.</p>
+                </div>
+
+
+
+            </div>
+    </section>
+    <section class="categories">
+        <div id="tech">
+            <h2>TECHNOLOGY</h2>
+            <div class="tech-news">
+                <div class="para">
+                    <img src="Youtube.jfif">
+                    <p>YouTube Remains Most Popular Social Media Platform in US in 2021, Facebook Settles for Second
+                        Spot:
+                        Report</p>
+                </div>
+                <div class="para">
+                    <img src="Realme alter.jfif">
+                    <p>Realme C20, Realme C21, Realme C25 With 20:9 Displays Launched in India: Price,
+                        Specifications</p>
+                </div>
+                <div class="para">
+                    <img src="Twitter.jfif">
+                    <p>Twitter Said to Hold Discussions for $4-Billion Takeover of Clubhouse</p>
+                </div>
+            </div>
+        </div>
+        <div class="health">
+            <h2>HEALTH</h2>
+            <div id="heal">
+                <div class="health-news">
+                    <img src="Namo.jfif">
+                    <p>Modi takes 2nd jab, says vax can defeat Covid
+                    </p>
+                </div>
+
+
+                <div class="health-news">
+                    <img src="Hyderabad3.jfif">
+                    <p>Hyderabad to house Medtronic’s global innovation centre</p>
+                </div>
+                <div class="health-news">
+                    <img src="men.jpg">
+                    <p>Why COVID-19 policy should explicitly consider men's health</p>
+                </div>
+            </div>
+        </div>
+        <div id="sports">
+
+            <h2>SPORTS</h2>
+            <div class="khela">
+                <div class="sports-news">
+                    <img src="IPL.webp">
+                    <p>
+                        How IPL changed the sports scene in the country
+                    </p>
+                </div>
+                <div class="sports-news">
+                    <img src="FIFA.jpg">
+                    <p>FIFA suspends Pakistan, Chad football associations</p>
+                </div>
+                <div class="sports-news">
+                    <img src="Swim.jpg">
+                    <p>Don’t know why swimming is being targetted: Coach Nihar Ameen on Karnataka shutting down pools
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </section>
+    <section class="end">
+        <!-- To create end section of all websites -->
+        <div class="logo">
+            <div class="social"><a href="#" class="fa fa-facebook"></a></div>
+            <div class="social"><a href="#" class="fa fa-twitter"></a></div>
+            <div class="social"><a href="#" class="fa fa-youtube"></a></div>
+            <div class="social"><a href="#" class="fa fa-reddit"></a></div>
+            <!-- The logos have been shamelessly copied from internet stylesheet has also been added -->
+        </div>
+        <!-- Now logo section is over we will look for other sections  -->
+        <div class="subparts">
+            <div class="publish">
+                <h2>Publications</h2>
+                <!-- Note instead of h6,I could have created a list but forgot  -->
+                <h6>Business today</h6>
+                <h6>Cosmopolitan</h6>
+                <h6>India Today</h6>
+                <h6>Money Today</h6>
+
+            </div>
+            <div class="television">
+                <h2>Television</h2>
+                <h6>Aaj Tak</h6>
+                <h6>Daily Aaj Tak</h6>
+                <h6>India Today Tv</h6>
+
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <h6>India Today Education</h6>
+                <h6>Vasant Valley</h6>
+                <h6>Best Colleges</h6>
+                <h6>Best Universities</h6>
+            </div>
+            <div class="events">
+                <h2>Events</h2>
+                <h6>Agenda Aaj Tak</h6>
+                <h6>Red Level</h6>
+                <h6>India Today Conclave</h6>
+            </div>
+            <div class="print">
+                <h2>Printing</h2>
+                <h6>Thomas press</h6>
+            </div>
+
+
+        </div>
+
+    </section>
+    <footer>
+        <div>
+            Copyright &copy;www.online news.com.All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>
